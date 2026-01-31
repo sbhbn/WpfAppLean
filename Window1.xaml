@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfAppLean.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppLean"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800"
+        Loaded="Window_Loaded"
+        WindowState="Maximized">
+    <Window.Background>
+        <SolidColorBrush>azure
+        </SolidColorBrush>
+    </Window.Background>
+  
+    <Grid x:Name="MyGrid">
+        <TextBlock x:Name="ShowInfo" Text="Hello WPF!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"
+                   ></TextBlock>
+        <Button x:Name="button1" Click="button1_Click" Width="160" Height="60">Click Here!
+        </Button>
+    </Grid>
+</Window>

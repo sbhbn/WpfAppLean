@@ -1,0 +1,114 @@
+﻿<Window x:Class="WpfAppLean.StackPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppLean"
+        mc:Ignorable="d"
+        Title="StackPanel" Height="450" Width="800">
+  <!--  <StackPanel Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <Label>
+                First Name:
+            </Label>
+            <TextBox Width="200"/>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Button Margin="10">Save</Button>
+            <Button Margin="10">Cannel</Button>
+        </StackPanel>
+        <TextBlock>Hello StackPanel</TextBlock>
+     
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" >Hello StackPanel</TextBlock>
+    </StackPanel>
+-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- 左側 -->
+        <Border Background="#f5f5f5" Margin="10" Grid.Column="0">
+            <StackPanel Margin="20">
+                <TextBlock Text="謝孟延"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"
+                        Background="LightPink"
+                          />
+
+                <TextBlock Text="約用助理"
+                       FontSize="16"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"
+                       Background="LightBlue"/>
+
+                <TextBlock Text="基本資料"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"
+                       Background="Beige"
+                           />
+
+                <TextBlock Text="員工編號:T10800498"
+                       FontSize="10"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"
+                         Background="LightBlue"/>
+
+                <TextBlock Text="部門:資訊系統組"
+                       FontSize="10"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Background="LightBlue"/>
+            </StackPanel>
+        </Border>
+
+        <!-- 右側 -->
+        <Grid Grid.Column="1" Margin="10" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- 聯絡方式 -->
+            <StackPanel Grid.Row="0" Margin="10">
+                <TextBlock Text="聯絡方式"
+                       FontSize="20"
+                         TextAlignment="Center"
+                       FontWeight="Bold"
+                       Margin="0,0,0,15"
+                        Background="White"/>
+
+                <TextBlock Text="電子郵件:"   TextAlignment="Center"/>
+                <TextBlock Text="T10800498@live.yuntech.edu.tw"   TextAlignment="Center"/>
+
+                <TextBlock Margin="0,10,0,0" Text="辦公室位置:"   TextAlignment="Center"/>
+                <TextBlock Text="AC109"   TextAlignment="Center"/>
+            </StackPanel>
+
+            <!-- 專案經歷 -->
+            <ScrollViewer Grid.Row="1" Margin="0,20,0,0">
+                <StackPanel>
+                    <TextBlock Text="專案經歷"
+                           FontSize="20"
+                           TextAlignment="Center"
+                           FontWeight="Bold"
+                           Margin="0,0,0,15"
+                           Background="White"/>
+
+                    <TextBlock Text="雲端農業系統(Java Web)"  TextAlignment="Center" FontWeight="DemiBold"  Margin="0,0,0,15" Background="LightYellow"/>
+                    <TextBlock Text="進出管理系統(2EMS)(Java Web)"   TextAlignment="Center" FontWeight="DemiBold"  Margin="0,0,0,15" Background="Aqua"/>
+                    <TextBlock Text="銀行系統(API .NET Swagger UI)"   TextAlignment="Center" FontWeight="DemiBold"  Margin="0,0,0,15" Background="LightYellow"/>
+                    <TextBlock Text="雷射、接近感測系統(Arduino NodeMCU、ESP32 CAM)"  TextAlignment="Center" FontWeight="DemiBold"  Margin="0,0,0,15" Background="Aqua"/>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</Window>
